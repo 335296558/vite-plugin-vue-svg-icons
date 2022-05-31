@@ -25,6 +25,10 @@ export default function vitePluginVueSvgIcons(options={}) {
             if (stat.isDirectory()) { // 是文件夹
                 loopReaddir(`${url}/${fi}`, paths)
             } else {
+                // 过滤非 svg 文件
+                if (fi.lastIndexOf('.svg') === -1) {
+                    return
+                }
                 paths.push({
                     path: `${url}/${fi}`,
                     filename: fi
