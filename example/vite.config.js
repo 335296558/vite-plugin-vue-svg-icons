@@ -8,9 +8,7 @@ export default defineConfig({
     plugins: [
         vue(),
         // Inspect(),
-        vitePluginVueSvgIcons({
-            dir: `${process.cwd()}/src/assets/svg2`
-        })
+        vitePluginVueSvgIcons()
     ],
     alias: {
         'vue': 'vue/dist/vue.esm-bundler.js'
